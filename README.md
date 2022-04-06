@@ -41,7 +41,7 @@ test
 
 # Запуск тестов в Jenkins выглядит следующим образом
 Главная страница сборки
-![](media/JenkinsJob.svg?raw=true)
+![](media/JenkinsJob.svg)
 
 Выбор параметров сборки
 ![](media/JenkinsJobStart.svg)
