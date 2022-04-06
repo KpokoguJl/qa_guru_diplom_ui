@@ -44,6 +44,7 @@ public class TestBase {
         Attach.attachAsText("Browser: ", browserName);
         Attach.attachAsText("Version: ", browserVersion);
         Attach.attachAsText("Remote: ", String.valueOf(config.getRemote()));
+        Attach.attachAsText("Login: ", config.selenoidLogin());
     }
 
     @AfterEach
