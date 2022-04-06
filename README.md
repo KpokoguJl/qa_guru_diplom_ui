@@ -29,7 +29,7 @@ test
 -Dresolution=${RESOLUTION}
 -DbaseUrl=${BASEURL}
 ```
-где:
+Где:
 
 `${BROWSER}` - тип браузера для тестов, 
 
@@ -62,7 +62,7 @@ test
 
 ![](media/AllureReportAll.svg)
 
-#По резултатам работы тестов отправляется краткий отчет в Telegram
+# По резултатам работы тестов отправляется краткий отчет в Telegram
 ![](media/TelegramBot.svg)
 
 # Пример прохождения теста на удаленной машине
