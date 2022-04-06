@@ -68,11 +68,11 @@ test
 # Пример прохождения теста на удаленной машине
 ![](media/Test.gif)
 
-#Создан проект в Allure TestOps
+# Создан проект в Allure TestOps
 Все тесты в проекте импортированы из кода, то есть не пришлось писать ни один тест-кейс вручную!
 ![](media/TestCases.svg)
 
-#Настроена интеграция Jenkins и Allure TestOps
+# Настроена интеграция Jenkins и Allure TestOps
 Запуск джоб осуществляется из интерфейса Allure TestOps
 ![](media/AllureJobs.svg)
 
