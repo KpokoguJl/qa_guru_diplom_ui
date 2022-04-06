@@ -69,7 +69,7 @@ public class UnicomMainPage extends TestBase {
     public void isBecomePartnerPageOpen ()
     {
         switchTo().window(1);
-        webdriver().shouldHave(currentFrameUrl(baseUrl + "/become-partner"));
+        webdriver().shouldHave(currentFrameUrl(baseUrl + "become-partner"));
     }
 
     @Step("Проверяю, что открылась страница Стать агентом.")
