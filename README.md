@@ -26,12 +26,18 @@ clean
 test
 -Dbrowser=${BROWSER}
 -Dversion=${VERSION}
+-Dresolution=${RESOLUTION}
+-DbaseUrl=${BASEURL}
 ```
 где:
 
 `${BROWSER}` - тип браузера для тестов, 
 
 `${VERSION}` - версия браузера.
+
+`${RESOLUTION}` - разрешение экрана
+
+`${BASEURL}` - урл сайта для теста (прменяется для прогоне тестов на разном окружении)
 
 # Запуск тестов в Jenkins выглядит следующим образом
 Главная страница сборки
@@ -56,10 +62,20 @@ test
 
 ![](media/AllureReportAll.svg)
 
-По резултатам работы тестов отправляется краткий отчет в Telegram
+#По резултатам работы тестов отправляется краткий отчет в Telegram
 ![](media/TelegramBot.svg)
 
 # Пример прохождения теста на удаленной машине
 ![](media/Test.gif)
 
+#Создан проект в Allure TestOps
+Все тесты в проекте импортированы из кода, то есть не пришлось писать ни один тест-кейс вручную!
+![](media/TestCases.svg)
+
+#Настроена интеграция Jenkins и Allure TestOps
+Запуск джоб осуществляется из интерфейса Allure TestOps
+![](media/AllureJobs.svg)
+
+Результаты работы джоб также отображаются в Allure TestOps
+![](media/LaunchedJobAllure.svg)
 
