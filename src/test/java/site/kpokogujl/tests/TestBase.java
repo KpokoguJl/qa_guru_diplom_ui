@@ -40,6 +40,10 @@ public class TestBase {
             capabilities.setCapability("enableVideo", true);
             Configuration.browserCapabilities = capabilities;
         }
+
+        Attach.attachAsText("Browser: ", browserName);
+        Attach.attachAsText("Version: ", browserVersion);
+        Attach.attachAsText("Remote: ", String.valueOf(config.getRemote()));
     }
 
     @AfterEach

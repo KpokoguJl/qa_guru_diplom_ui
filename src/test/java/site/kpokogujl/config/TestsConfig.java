@@ -13,7 +13,7 @@ public interface TestsConfig extends Config {
     Browser getBrowser();
 
     @Key("version")
-    @DefaultValue("91.0")
+    @DefaultValue("99.0")
     String getBrowserVersion();
 
     @Key("baseUrl")
