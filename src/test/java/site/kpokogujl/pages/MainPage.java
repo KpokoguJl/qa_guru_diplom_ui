@@ -21,7 +21,7 @@ public class MainPage extends TestBase {
 
     @Step("Открываю главную страницу.")
     public MainPage openPage(){
-        open("/");
+        open("");
 
         return this;
     }
@@ -66,7 +66,7 @@ public class MainPage extends TestBase {
     public void isBecomePartnerPageOpen ()
     {
         switchTo().window(1);
-        webdriver().shouldHave(currentFrameUrl(baseUrl + "/become-partner"));
+        webdriver().shouldHave(currentFrameUrl(baseUrl + "become-partner"));
     }
 
     @Step("Проверяю, что открылась страница Стать агентом.")

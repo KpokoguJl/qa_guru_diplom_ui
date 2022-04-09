@@ -16,7 +16,7 @@ public class CarCreditPage {
 
     @Step("Открываю страницу Автокредиты.")
     public CarCreditPage openPage(){
-        open("/private/avtokredity");
+        open("private/avtokredity");
 
         return this;
     }

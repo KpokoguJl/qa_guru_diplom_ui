@@ -7,12 +7,12 @@ repositories {
     mavenCentral()
 }
 
-def selenideVersion = "6.3.3",
+def selenideVersion = "6.3.5",
     junitVersion = "5.8.2",
     slf4jVersion = "1.7.36",
     javaFakerVersion = "1.0.2",
     allureSelenideVersion = "2.17.3",
-    allureRestAssuredVersion = "2.17.2",
+    allureRestAssuredVersion = "2.17.3",
     ownerVersion = "1.0.12",
     restAssuredVersion = "4.5.1",
     assertjVersion = "3.22.0",
@@ -59,6 +59,16 @@ tasks.withType(JavaCompile) {
 tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform()
+
+    if (System.getProperty("threads") != null) {
+        systemProperties += [
+                'junit.jupiter.execution.parallel.enabled'                 : true,
+                'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
+                'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
+                'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
+                'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
+        ]
+    }
 
     testLogging {
         lifecycle {

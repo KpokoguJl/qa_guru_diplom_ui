@@ -16,7 +16,7 @@ public class CreditPage {
 
     @Step("Открываю страницу Кредиты.")
     public CreditPage openPage(){
-        open("/private/kredity");
+        open("private/kredity");
 
         return this;
     }

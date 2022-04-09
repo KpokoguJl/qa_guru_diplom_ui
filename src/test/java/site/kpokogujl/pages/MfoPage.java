@@ -15,7 +15,7 @@ public class MfoPage {
 
     @Step("Открываю страницу Микрозаймы.")
     public MfoPage openPage(){
-        open("/private/mikrozajmy");
+        open("private/mikrozajmy");
 
         return this;
     }

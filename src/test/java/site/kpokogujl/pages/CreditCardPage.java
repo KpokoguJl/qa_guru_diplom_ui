@@ -16,7 +16,7 @@ public class CreditCardPage {
 
     @Step("Открываю страницу Кредитные карты.")
     public CreditCardPage openPage(){
-        open("/private/kreditnye-karty");
+        open("private/kreditnye-karty");
 
         return this;
     }
