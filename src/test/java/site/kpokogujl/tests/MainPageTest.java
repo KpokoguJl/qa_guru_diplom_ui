@@ -110,5 +110,4 @@ public class MainPageTest extends TestBase{
         mainPage
                 .isBecomeAgentPageOpen();
     }
-
 }

@@ -3,14 +3,17 @@ package site.kpokogujl.pages;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverConditions.currentFrameUrl;
 
 public class CreditPage {
-    SelenideElement pageHeader = $(byText("Потребительские кредиты")),
+    SelenideElement pageHeader = $(byText(".breadcrumbs-item-text")),
             filterButton = $(byText("Фильтры")),
             additionalParamTitle = $(".header").$(".title");
 
@@ -27,7 +30,7 @@ public class CreditPage {
     }
     @Step("Проверяю, что открыта страница Потребительские кредиты.")
     public void pageIsOpened (){
-        pageHeader.shouldHave(text("Потребительские кредиты"));
+        webdriver().shouldHave(currentFrameUrl(baseUrl + "private/kredity"));
     }
 
     @Step("Проверяю, что открыты дополнительные фильтры.")

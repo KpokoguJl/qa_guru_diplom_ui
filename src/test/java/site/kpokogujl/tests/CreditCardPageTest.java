@@ -7,7 +7,7 @@ import site.kpokogujl.pages.CreditCardPage;
 
 public class CreditCardPageTest extends TestBase {
 
-
+    @Test
     @Owner("allure8")
     @Feature("UI tests Unicom24")
     @Story("Credit Card Page Tests")
