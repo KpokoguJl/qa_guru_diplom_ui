@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class CreditPage {
-    SelenideElement pageHeader = $(".my0"),
+    SelenideElement pageHeader = $(byText("Потребительские кредиты")),
             filterButton = $(byText("Фильтры")),
             additionalParamTitle = $(".header").$(".title");
 
