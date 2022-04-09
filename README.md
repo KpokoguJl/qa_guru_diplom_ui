@@ -62,6 +62,9 @@ test
 
 ![](media/AllureReportAll.svg)
 
+Тесты запускаются в многопоточном режиме
+![](media/Multithread.svg)
+
 # По резултатам работы тестов отправляется краткий отчет в Telegram
 ![](media/TelegramBot.svg)
 
