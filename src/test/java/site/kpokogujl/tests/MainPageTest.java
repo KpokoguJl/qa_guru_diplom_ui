@@ -9,12 +9,12 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class MainPageTest extends TestBase{
 
+    @Test
     @Owner("allure8")
     @Feature("UI tests Unicom24")
     @Story("Main Page Tests")
-    @DisplayName("Переход на страницу МФО")
     @Severity(SeverityLevel.BLOCKER)
-    @Test
+    @DisplayName("Переход на страницу МФО")
     void goToMfoPageTest() {
         MainPage mainPage = new MainPage();
         MfoPage mfoPage = new MfoPage();
@@ -26,12 +26,12 @@ public class MainPageTest extends TestBase{
         mfoPage.pageIsOpened();
     }
 
+    @Test
     @Owner("allure8")
     @Feature("UI tests Unicom24")
     @Story("Main Page Tests")
-    @DisplayName("Переход на страницу Кредитных карт")
     @Severity(SeverityLevel.BLOCKER)
-    @Test
+    @DisplayName("Переход на страницу Кредитных карт")
     void goToCreditCardPageTest() {
         MainPage mainPage = new MainPage();
         CreditCardPage creditCardPage = new CreditCardPage();
@@ -43,12 +43,12 @@ public class MainPageTest extends TestBase{
         creditCardPage.pageIsOpened();
     }
 
+    @Test
     @Owner("allure8")
     @Feature("UI tests Unicom24")
     @Story("Main Page Tests")
-    @DisplayName("Переход на страницу Кредиты")
     @Severity(SeverityLevel.BLOCKER)
-    @Test
+    @DisplayName("Переход на страницу Кредиты")
     void goToCreditPageTest() {
         MainPage mainPage = new MainPage();
         CreditPage creditPage = new CreditPage();
@@ -60,12 +60,12 @@ public class MainPageTest extends TestBase{
         creditPage.pageIsOpened();
     }
 
+    @Test
     @Owner("allure8")
     @Feature("UI tests Unicom24")
     @Story("Main Page Tests")
-    @DisplayName("Переход на страницу Автокредита")
     @Severity(SeverityLevel.BLOCKER)
-    @Test
+    @DisplayName("Переход на страницу Автокредита")
     void goToCarCreditPageTest() {
         MainPage mainPage = new MainPage();
         CarCreditPage carCreditPage = new CarCreditPage();
@@ -77,12 +77,12 @@ public class MainPageTest extends TestBase{
         carCreditPage.pageIsOpened();
     }
 
+    @Test
     @Owner("allure8")
     @Feature("UI tests Unicom24")
     @Story("Main Page Tests")
-    @DisplayName("Проверка кнопки Стать партнером")
     @Severity(SeverityLevel.BLOCKER)
-    @Test
+    @DisplayName("Проверка кнопки Стать партнером")
     void becomePartnerTest(){
         MainPage mainPage = new MainPage();
 
@@ -94,12 +94,12 @@ public class MainPageTest extends TestBase{
                 .isBecomePartnerPageOpen();
     }
 
+    @Test
     @Owner("allure8")
     @Feature("UI tests Unicom24")
     @Story("Main Page Tests")
-    @DisplayName("Проверка кнопки стать Агентом")
     @Severity(SeverityLevel.BLOCKER)
-    @Test
+    @DisplayName("Проверка кнопки стать Агентом")
     void becomeAgentTest(){
         MainPage mainPage = new MainPage();
 

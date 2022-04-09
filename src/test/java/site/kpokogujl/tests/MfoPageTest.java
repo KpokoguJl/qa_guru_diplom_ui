@@ -7,12 +7,12 @@ import site.kpokogujl.pages.MfoPage;
 
 public class MfoPageTest extends TestBase{
 
+    @Test
     @Owner("allure8")
     @Feature("UI tests Unicom24")
     @Story("MFO Page Tests")
-    @DisplayName("Проверка дополнительных фильтров")
     @Severity(SeverityLevel.BLOCKER)
-    @Test
+    @DisplayName("Проверка дополнительных фильтров")
     void openFiltersOnMfoPageTest() {
         MfoPage mfoPage = new MfoPage();
 
