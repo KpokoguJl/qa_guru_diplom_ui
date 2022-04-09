@@ -9,30 +9,33 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class UnicomCreditCardPage {
+public class CarCreditPage {
     SelenideElement pageHeader = $(".my0"),
             filterButton = $(byText("Фильтры")),
             additionalParamTitle = $(".header").$(".title");
 
-    @Step("Открываю страницу Кредитные карты.")
-    public UnicomCreditCardPage openPage(){
-        open("/private/kreditnye-karty");
+    @Step("Открываю страницу Автокредиты.")
+    public CarCreditPage openPage(){
+        open("/private/avtokredity");
 
         return this;
     }
 
     @Step("Раскрываю фильтры.")
-    public void openAdditionalParams () {
+    public void openAdditionalParams ()
+    {
         filterButton.click();
     }
 
-    @Step("Проверяю, что открыта страница Кредитные карты.")
-    public void pageIsOpened (){
-        pageHeader.shouldHave(text("Кредитные карты"));
+    @Step("Проверяю, что открыта страница Автокредит.")
+    public void pageIsOpened ()
+    {
+        pageHeader.shouldHave(text("Автокредит"));
     }
 
     @Step("Проверяю, что открыты дополнительные фильтры.")
-    public void filtersIsOpened (){
+    public void filtersIsOpened ()
+    {
         additionalParamTitle.shouldBe(visible).shouldHave(text("Дополнительные параметры"));
     }
 }

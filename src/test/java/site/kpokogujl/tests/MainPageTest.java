@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import site.kpokogujl.pages.*;
 
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.sleep;
 
 public class MainPageTest extends TestBase{
 
@@ -17,8 +16,8 @@ public class MainPageTest extends TestBase{
     @Severity(SeverityLevel.BLOCKER)
     @Test
     void goToMfoPageTest() {
-        UnicomMainPage mainPage = new UnicomMainPage();
-        UnicomMfoPage mfoPage = new UnicomMfoPage();
+        MainPage mainPage = new MainPage();
+        MfoPage mfoPage = new MfoPage();
 
         mainPage
                 .openPage()
@@ -34,8 +33,8 @@ public class MainPageTest extends TestBase{
     @Severity(SeverityLevel.BLOCKER)
     @Test
     void goToCreditCardPageTest() {
-        UnicomMainPage mainPage = new UnicomMainPage();
-        UnicomCreditCardPage creditCardPage = new UnicomCreditCardPage();
+        MainPage mainPage = new MainPage();
+        CreditCardPage creditCardPage = new CreditCardPage();
 
         mainPage
                 .openPage()
@@ -51,8 +50,8 @@ public class MainPageTest extends TestBase{
     @Severity(SeverityLevel.BLOCKER)
     @Test
     void goToCreditPageTest() {
-        UnicomMainPage mainPage = new UnicomMainPage();
-        UnicomCreditPage creditPage = new UnicomCreditPage();
+        MainPage mainPage = new MainPage();
+        CreditPage creditPage = new CreditPage();
 
         mainPage
                 .openPage()
@@ -68,8 +67,8 @@ public class MainPageTest extends TestBase{
     @Severity(SeverityLevel.BLOCKER)
     @Test
     void goToCarCreditPageTest() {
-        UnicomMainPage mainPage = new UnicomMainPage();
-        UnicomCarCreditPage carCreditPage = new UnicomCarCreditPage();
+        MainPage mainPage = new MainPage();
+        CarCreditPage carCreditPage = new CarCreditPage();
 
         mainPage
                 .openPage()
@@ -85,7 +84,7 @@ public class MainPageTest extends TestBase{
     @Severity(SeverityLevel.BLOCKER)
     @Test
     void becomePartnerTest(){
-        UnicomMainPage mainPage = new UnicomMainPage();
+        MainPage mainPage = new MainPage();
 
         mainPage
                 .openPage()
@@ -102,7 +101,7 @@ public class MainPageTest extends TestBase{
     @Severity(SeverityLevel.BLOCKER)
     @Test
     void becomeAgentTest(){
-        UnicomMainPage mainPage = new UnicomMainPage();
+        MainPage mainPage = new MainPage();
 
         mainPage
                 .openPage()

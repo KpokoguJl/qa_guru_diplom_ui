@@ -1,19 +1,16 @@
 package site.kpokogujl.pages;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import site.kpokogujl.tests.TestBase;
 
 import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Selectors.byLinkText;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.currentFrameUrl;
-import static com.codeborne.selenide.WebDriverConditions.url;
 
-public class UnicomMainPage extends TestBase {
+public class MainPage extends TestBase {
     SelenideElement servicesMenu = $(".link").$(byText("Сервисы")),
             mfoButton = $(".app-icon-clock-24px"),
             creditCardButton = $(".app-icon-credit-card-24px"),
@@ -23,7 +20,7 @@ public class UnicomMainPage extends TestBase {
             becomeAgentButton = $(By.linkText("Стать агентом"));
 
     @Step("Открываю главную страницу.")
-    public UnicomMainPage openPage(){
+    public MainPage openPage(){
         open("/");
 
         return this;

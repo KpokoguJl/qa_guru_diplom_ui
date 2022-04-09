@@ -3,7 +3,7 @@ package site.kpokogujl.tests;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import site.kpokogujl.pages.UnicomCarCreditPage;
+import site.kpokogujl.pages.CarCreditPage;
 
 public class CarCreditPageTest extends TestBase {
 
@@ -14,7 +14,7 @@ public class CarCreditPageTest extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @Test
     void openFiltersOnCarCreditPageTest() {
-        UnicomCarCreditPage carCreditPage = new UnicomCarCreditPage();
+        CarCreditPage carCreditPage = new CarCreditPage();
 
         carCreditPage
                 .openPage()

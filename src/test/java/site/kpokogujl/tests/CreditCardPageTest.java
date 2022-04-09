@@ -3,7 +3,7 @@ package site.kpokogujl.tests;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import site.kpokogujl.pages.UnicomCreditCardPage;
+import site.kpokogujl.pages.CreditCardPage;
 
 public class CreditCardPageTest extends TestBase {
 
@@ -14,7 +14,7 @@ public class CreditCardPageTest extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @Test
     void openFiltersOnCreditCardPageTest() {
-        UnicomCreditCardPage creditCardPage = new UnicomCreditCardPage();
+        CreditCardPage creditCardPage = new CreditCardPage();
 
         creditCardPage
                 .openPage()

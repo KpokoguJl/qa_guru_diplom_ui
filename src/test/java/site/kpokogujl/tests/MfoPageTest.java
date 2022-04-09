@@ -3,7 +3,7 @@ package site.kpokogujl.tests;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import site.kpokogujl.pages.UnicomMfoPage;
+import site.kpokogujl.pages.MfoPage;
 
 public class MfoPageTest extends TestBase{
 
@@ -14,7 +14,7 @@ public class MfoPageTest extends TestBase{
     @Severity(SeverityLevel.BLOCKER)
     @Test
     void openFiltersOnMfoPageTest() {
-        UnicomMfoPage mfoPage = new UnicomMfoPage();
+        MfoPage mfoPage = new MfoPage();
 
         mfoPage
                 .openPage()
