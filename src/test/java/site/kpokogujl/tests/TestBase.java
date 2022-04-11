@@ -15,6 +15,8 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 public class TestBase {
     @BeforeAll
     static void setUp(){
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+
         TestsConfig config = ConfigFactory.create(TestsConfig.class, System.getProperties());
 
         String browserName = String.valueOf(config.getBrowser());
