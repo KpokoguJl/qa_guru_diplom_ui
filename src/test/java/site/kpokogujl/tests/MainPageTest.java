@@ -7,7 +7,7 @@ import site.kpokogujl.pages.*;
 
 import static com.codeborne.selenide.Selenide.open;
 
-public class MainPageTest extends TestBase{
+public class MainPageTest extends TestBase {
 
     @Test
     @Owner("allure8")
@@ -83,7 +83,7 @@ public class MainPageTest extends TestBase{
     @Story("Main Page Tests")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка кнопки Стать партнером")
-    void becomePartnerTest(){
+    void becomePartnerTest() {
         MainPage mainPage = new MainPage();
 
         mainPage
@@ -100,7 +100,7 @@ public class MainPageTest extends TestBase{
     @Story("Main Page Tests")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка кнопки стать Агентом")
-    void becomeAgentTest(){
+    void becomeAgentTest() {
         MainPage mainPage = new MainPage();
 
         mainPage

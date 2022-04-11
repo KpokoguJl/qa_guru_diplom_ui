@@ -20,58 +20,50 @@ public class MainPage extends TestBase {
             becomeAgentButton = $(By.linkText("Стать агентом"));
 
     @Step("Открываю главную страницу.")
-    public MainPage openPage(){
+    public MainPage openPage() {
         open("");
 
         return this;
     }
 
     @Step("Кликаю на кнопку МФО.")
-    public void mfoButtonClick ()
-    {
+    public void mfoButtonClick() {
         mfoButton.click();
     }
 
     @Step("Кликаю на кнопку Кредитные карты.")
-    public void creditCardButtonClick ()
-    {
+    public void creditCardButtonClick() {
         creditCardButton.click();
     }
 
     @Step("Кликаю на кнопку Кредиты.")
-    public void creditButtonClick ()
-    {
+    public void creditButtonClick() {
         creditButton.click();
     }
 
     @Step("Кликаю на кнопку Автокредиты.")
-    public void carCreditButtonClick ()
-    {
+    public void carCreditButtonClick() {
         carCreditButton.click();
     }
 
     @Step("Кликаю на кнопку Стать партнером.")
-    public void becomePartnerButtonClick ()
-    {
+    public void becomePartnerButtonClick() {
         becomePartnerButton.click();
     }
 
     @Step("Кликаю на кнопку Стать агентом.")
-    public void becomeAgentButtonClick ()
-    {
+    public void becomeAgentButtonClick() {
         becomeAgentButton.click();
     }
 
     @Step("Проверяю, что открылась страница Стать партнером.")
-    public void isBecomePartnerPageOpen ()
-    {
+    public void isBecomePartnerPageOpen() {
         switchTo().window(1);
         webdriver().shouldHave(currentFrameUrl(baseUrl + "become-partner"));
     }
 
     @Step("Проверяю, что открылась страница Стать агентом.")
-    public void isBecomeAgentPageOpen ()
-    {
+    public void isBecomeAgentPageOpen() {
         switchTo().window(1);
         webdriver().shouldHave(currentFrameUrl("https://nfc-partners.ru/"));
     }

@@ -20,6 +20,7 @@ def selenideVersion = "6.3.5",
 
 group 'qa.guru.allure'
 version '1.0-SNAPSHOT'
+
 allure {
     report {
         version.set(allureSelenideVersion)

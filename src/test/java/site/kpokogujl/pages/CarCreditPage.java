@@ -12,30 +12,27 @@ import static com.codeborne.selenide.Selenide.open;
 public class CarCreditPage {
     SelenideElement pageHeader = $(".my0"),
             filterButton = $(byText("Фильтры")),
-            additionalParamTitle = $(".header").$(".title");
+            additionalParamTitle = $(".header .title");
 
     @Step("Открываю страницу Автокредиты.")
-    public CarCreditPage openPage(){
+    public CarCreditPage openPage() {
         open("private/avtokredity");
 
         return this;
     }
 
     @Step("Раскрываю фильтры.")
-    public void openAdditionalParams ()
-    {
+    public void openAdditionalParams() {
         filterButton.click();
     }
 
     @Step("Проверяю, что открыта страница Автокредит.")
-    public void pageIsOpened ()
-    {
+    public void pageIsOpened() {
         pageHeader.shouldHave(text("Автокредит"));
     }
 
     @Step("Проверяю, что открыты дополнительные фильтры.")
-    public void filtersIsOpened ()
-    {
+    public void filtersIsOpened() {
         additionalParamTitle.shouldBe(visible).shouldHave(text("Дополнительные параметры"));
     }
 }

@@ -11,27 +11,27 @@ import static com.codeborne.selenide.Selenide.open;
 public class MfoPage {
     SelenideElement pageHeader = $(".my0"),
             filterButton = $(byText("Фильтры")),
-            additionalParamTitle = $(".header").$(".title");
+            additionalParamTitle = $(".header .title");
 
     @Step("Открываю страницу Микрозаймы.")
-    public MfoPage openPage(){
+    public MfoPage openPage() {
         open("private/mikrozajmy");
 
         return this;
     }
 
     @Step("Раскрываю фильтры.")
-    public void openAdditionalParams () {
+    public void openAdditionalParams() {
         filterButton.click();
     }
 
     @Step("Проверяю, что открыта страница Микрозаймы.")
-    public void pageIsOpened (){
+    public void pageIsOpened() {
         pageHeader.shouldHave(text("Займы онлайн на карту банка"));
     }
 
     @Step("Проверяю, что открыты дополнительные фильтры.")
-    public void filtersIsOpened (){
+    public void filtersIsOpened() {
         additionalParamTitle.shouldBe(visible).shouldHave(text("Дополнительные параметры"));
     }
 }

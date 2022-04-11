@@ -5,8 +5,11 @@ import org.aeonbits.owner.Config;
 @Config.Sources("classpath:credentials.properties")
 public interface TestsConfig extends Config {
 
-    String selenoidLogin();
-    String selenoidPassword();
+    @Key("selenoidLogin")
+    String getSelenoidLogin();
+
+    @Key("selenoidPassword")
+    String getSelenoidPassword();
 
     @Key("browser")
     @DefaultValue("CHROME")

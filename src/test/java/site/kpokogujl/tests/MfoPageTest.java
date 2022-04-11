@@ -5,7 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import site.kpokogujl.pages.MfoPage;
 
-public class MfoPageTest extends TestBase{
+public class MfoPageTest extends TestBase {
 
     @Test
     @Owner("allure8")

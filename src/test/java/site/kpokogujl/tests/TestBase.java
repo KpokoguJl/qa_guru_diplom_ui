@@ -29,8 +29,8 @@ public class TestBase {
         Configuration.browserSize = browserResolution;
 
         if (config.getRemote()){
-            String selenoidLogin = config.selenoidLogin(),
-                    selenoidPassword = config.selenoidPassword();
+            String selenoidLogin = config.getSelenoidLogin(),
+                    selenoidPassword = config.getSelenoidPassword();
 
             Configuration.remote = String.format("https://%s:%s@selenoid.autotests.cloud/wd/hub",
                     selenoidLogin, selenoidPassword);
@@ -44,7 +44,7 @@ public class TestBase {
         Attach.attachAsText("Browser: ", browserName);
         Attach.attachAsText("Version: ", browserVersion);
         Attach.attachAsText("Remote: ", String.valueOf(config.getRemote()));
-        Attach.attachAsText("Login: ", config.selenoidLogin());
+        Attach.attachAsText("Login: ", config.getSelenoidLogin());
     }
 
     @AfterEach
